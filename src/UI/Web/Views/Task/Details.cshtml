@@ -1,0 +1,35 @@
+@model DJRM.Configuration.Model.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Task</legend>
+
+    <div class="display-label">ObjectType</div>
+    <div class="display-field">@(Model.ObjectType == null ? "None" : Model.ObjectType.Name)</div>
+
+    <div class="display-label">IsNew</div>
+    <div class="display-field">@Model.IsNew</div>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">@Model.Name</div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">@Model.Description</div>
+
+    <div class="display-label">CustomerId</div>
+    <div class="display-field">@Model.CustomerId</div>
+
+    <div class="display-label">Customer</div>
+    <div class="display-field">@(Model.Customer == null ? "None" : Model.Customer.Title)</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

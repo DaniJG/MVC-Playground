@@ -1,0 +1,41 @@
+@model DJRM.Configuration.Model.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Customer</legend>
+
+    <div class="display-label">ObjectType</div>
+    <div class="display-field">@(Model.ObjectType == null ? "None" : Model.ObjectType.Name)</div>
+
+    <div class="display-label">IsNew</div>
+    <div class="display-field">@Model.IsNew</div>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">@Model.FirstName</div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">@Model.LastName</div>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">@Model.Title</div>
+
+    <div class="display-label">DoB</div>
+    <div class="display-field">@String.Format("{0:g}", Model.DoB)</div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">@Model.Address</div>
+
+    <div class="display-label">Tasks</div>
+    <div class="display-field">@(Model.Tasks == null ? "None" : Model.Tasks.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

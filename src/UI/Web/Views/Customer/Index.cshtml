@@ -1,0 +1,77 @@
+@model IEnumerable<DJRM.Configuration.Model.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            ObjectType
+        </th>
+        <th>
+            IsNew
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            DoB
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Tasks
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@(item.ObjectType == null ? "None" : item.ObjectType.Name)
+        </td>
+        <td>
+			@item.IsNew
+        </td>
+        <td>
+			@item.FirstName
+        </td>
+        <td>
+			@item.LastName
+        </td>
+        <td>
+			@item.Title
+        </td>
+        <td>
+			@String.Format("{0:g}", item.DoB)
+        </td>
+        <td>
+			@item.Address
+        </td>
+        <td>
+			@(item.Tasks == null ? "None" : item.Tasks.Count.ToString())
+        </td>
+    </tr>
+}
+
+</table>
+
+

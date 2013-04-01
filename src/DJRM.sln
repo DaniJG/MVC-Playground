@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Configuration.Controller", "Configuration.Controller\DJRM.Configuration.Controller.csproj", "{A75024A9-C45E-48D6-9AB7-EF54FCABC06C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Configuration.Model", "Configuration.Model\DJRM.Configuration.Model.csproj", "{8C13DC34-5099-4561-9AC8-EE1E1DB32F2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Configuration.Repository", "Configuration.Repository\DJRM.Configuration.Repository.csproj", "{C3DF5D60-2E97-4BA8-8B54-BF4A76D6604E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Configuration.Service", "Configuration.Service\DJRM.Configuration.Service.csproj", "{46D21072-36F5-4ADE-BCD4-610C53A1AA43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Common.Infrastructure", "Common.Infrastructure\DJRM.Common.Infrastructure.csproj", "{5452A2AD-320C-4C9C-98EF-28310CC74ABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Common.Security", "Common.Security\DJRM.Common.Security.csproj", "{A854AA69-F4D6-41A4-A7D4-DBC83864CCD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.Common.Controller", "Common.Controller\DJRM.Common.Controller.csproj", "{415022A3-B7D0-4009-BFC4-D2E5FEF27E85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DJRM.UI.Web", "UI\Web\DJRM.UI.Web.csproj", "{31481212-1307-43CF-9B80-DAE4E1A29713}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A75024A9-C45E-48D6-9AB7-EF54FCABC06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A75024A9-C45E-48D6-9AB7-EF54FCABC06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A75024A9-C45E-48D6-9AB7-EF54FCABC06C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A75024A9-C45E-48D6-9AB7-EF54FCABC06C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C13DC34-5099-4561-9AC8-EE1E1DB32F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C13DC34-5099-4561-9AC8-EE1E1DB32F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C13DC34-5099-4561-9AC8-EE1E1DB32F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C13DC34-5099-4561-9AC8-EE1E1DB32F2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DF5D60-2E97-4BA8-8B54-BF4A76D6604E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DF5D60-2E97-4BA8-8B54-BF4A76D6604E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DF5D60-2E97-4BA8-8B54-BF4A76D6604E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DF5D60-2E97-4BA8-8B54-BF4A76D6604E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D21072-36F5-4ADE-BCD4-610C53A1AA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D21072-36F5-4ADE-BCD4-610C53A1AA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D21072-36F5-4ADE-BCD4-610C53A1AA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D21072-36F5-4ADE-BCD4-610C53A1AA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5452A2AD-320C-4C9C-98EF-28310CC74ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5452A2AD-320C-4C9C-98EF-28310CC74ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5452A2AD-320C-4C9C-98EF-28310CC74ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5452A2AD-320C-4C9C-98EF-28310CC74ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A854AA69-F4D6-41A4-A7D4-DBC83864CCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A854AA69-F4D6-41A4-A7D4-DBC83864CCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A854AA69-F4D6-41A4-A7D4-DBC83864CCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A854AA69-F4D6-41A4-A7D4-DBC83864CCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415022A3-B7D0-4009-BFC4-D2E5FEF27E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415022A3-B7D0-4009-BFC4-D2E5FEF27E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415022A3-B7D0-4009-BFC4-D2E5FEF27E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415022A3-B7D0-4009-BFC4-D2E5FEF27E85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31481212-1307-43CF-9B80-DAE4E1A29713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31481212-1307-43CF-9B80-DAE4E1A29713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31481212-1307-43CF-9B80-DAE4E1A29713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31481212-1307-43CF-9B80-DAE4E1A29713}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal
