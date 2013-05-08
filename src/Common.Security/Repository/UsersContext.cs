@@ -15,5 +15,6 @@ namespace DJRM.Common.Security.Repository
         }
 
         public DbSet<UserProfile> UserProfiles { get; set; }
+        
     }
 }

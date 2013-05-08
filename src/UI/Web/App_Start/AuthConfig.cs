@@ -25,7 +25,9 @@ namespace DJRM.UI.Web
             //    appId: "",
             //    appSecret: "");
 
-            OAuthWebSecurity.RegisterGoogleClient();
+            //OAuthWebSecurity.RegisterGoogleClient();
+
+            OAuthWebSecurity.RegisterClient(new Common.Security.OAuthProviders.GoogleOAuthProvider(), "Google", null /* extra data*/);
         }
     }
 }

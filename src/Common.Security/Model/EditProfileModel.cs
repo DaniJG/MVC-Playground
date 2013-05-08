@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
-using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
 
 namespace DJRM.Common.Security.Model
 {
-    public class RegisterExternalLoginModel
+    public class EditProfileModel
     {
-        [Required]
-        [Remote("UserNameIsUnique", "Account")]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
 
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email address")]
@@ -26,9 +21,5 @@ namespace DJRM.Common.Security.Model
 
         [Display(Name = "Country")]
         public string Country { get; set; }
-
-        public string PictureURL { get; set; }
-
-        public string ExternalLoginData { get; set; }
     }
 }

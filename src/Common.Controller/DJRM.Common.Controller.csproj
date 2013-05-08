@@ -67,6 +67,7 @@
     <Compile Include="ErrorHandling\ElmahErrorHandlerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AccountController.cs" />
+    <Compile Include="Security\AccountLoginController.cs" />
     <Compile Include="Security\InitializeSimpleMembershipAttribute.cs" />
   </ItemGroup>
   <ItemGroup>

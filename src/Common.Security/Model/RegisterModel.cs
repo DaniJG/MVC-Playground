@@ -11,6 +11,7 @@ namespace DJRM.Common.Security.Model
     {
         [Required]
         [Display(Name = "User name")]
+        [Remote("UserNameIsUnique", "Account")]
         public string UserName { get; set; }
 
         [Required]
@@ -23,5 +24,21 @@ namespace DJRM.Common.Security.Model
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Remote("EmailIsUnique", "Account")]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = "Email address")]
+        public string Email { get; set; }
+
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Country")]
+        public string Country { get; set; }
+
     }
 }

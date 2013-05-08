@@ -1,4 +1,4 @@
-﻿@model MvcApplication1.Models.LocalPasswordModel
+﻿@model DJRM.Common.Security.Model.LocalPasswordModel
 @{
     ViewBag.Title = "Manage Account";
 }
@@ -7,24 +7,34 @@
     <h1>@ViewBag.Title.</h1>
 </hgroup>
 
-<p class="message-success">@ViewBag.StatusMessage</p>
-
 <p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
 
-@if (ViewBag.HasLocalPassword)
-{
-    @Html.Partial("_ChangePasswordPartial")
-}
-else
-{ 
-    @Html.Partial("_SetPasswordPartial")
-}
+<aside>
+    @Html.Action("Picture")
+</aside>
+
+<section id="editProfileContainer">
+    @Html.Action("EditProfile")
+</section>
+
+<section id="PasswordManagement">
+    <p class="message-success">@ViewBag.StatusMessage</p>
+
+    @if (ViewBag.HasLocalPassword)
+    {
+        @Html.Partial("_ChangePasswordPartial")
+    }
+    else
+    { 
+        @Html.Partial("_SetPasswordPartial")
+    }
+</section>
 
 <section id="externalLogins">
     @Html.Action("RemoveExternalLogins")
 
     <h3>Add an external login</h3>
-    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+    @Html.Action("ExternalLoginsList", "AccountLogin",  new { ReturnUrl = ViewBag.ReturnUrl })
 </section>
 
 @section Scripts {
