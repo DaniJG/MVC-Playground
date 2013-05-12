@@ -13,11 +13,11 @@
     @Html.Action("Picture")
 </aside>
 
-<section id="editProfileContainer">
+<article id="editProfileContainer">
     @Html.Action("EditProfile")
-</section>
+</article>
 
-<section id="PasswordManagement">
+<article id="PasswordManagement">
     <p class="message-success">@ViewBag.StatusMessage</p>
 
     @if (ViewBag.HasLocalPassword)
@@ -28,14 +28,14 @@
     { 
         @Html.Partial("_SetPasswordPartial")
     }
-</section>
+</article>
 
-<section id="externalLogins">
+<aside id="externalLogins">
     @Html.Action("RemoveExternalLogins")
 
     <h3>Add an external login</h3>
     @Html.Action("ExternalLoginsList", "AccountLogin",  new { ReturnUrl = ViewBag.ReturnUrl })
-</section>
+</aside>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

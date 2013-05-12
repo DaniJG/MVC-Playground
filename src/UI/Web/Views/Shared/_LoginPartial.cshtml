@@ -6,6 +6,7 @@
             @Html.AntiForgeryToken()
             <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
         }
+        @Html.Action("Picture", "Account")
     </text>
 } else {
     <ul>

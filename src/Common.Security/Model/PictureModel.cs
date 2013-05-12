@@ -33,8 +33,10 @@ namespace DJRM.Common.Security.Model
                     {
                         sBuilder.Append(data[i].ToString("x2"));
                     }
-                    return sBuilder.ToString();
+                    _hashedEmail = sBuilder.ToString();
                 }
+
+                return _hashedEmail;
             }
         }
         private string _hashedEmail;

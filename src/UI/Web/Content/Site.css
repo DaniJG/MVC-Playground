@@ -189,6 +189,17 @@ footer #debuggingControls ul li{
         list-style: none;
     }
 
+    #login .profilePicture{
+        height: 35px;
+        width: 35px;
+        vertical-align: middle;
+    }
+
+    #login #GetGravatar{
+        background: none;
+        text-decoration:none;
+    }
+
 
 /* menu
 ----------------------------------------------------------*/
@@ -315,6 +326,17 @@ ol.round {
         ol.round li.nine {
             background: url("../Images/orderedList9.png") no-repeat;
         }
+
+.profilePicture{
+    max-height: 150px;
+    max-width: 150px;
+    vertical-align: middle;
+}
+
+#GetGravatar{
+    background: none;
+    text-decoration:none;
+}
 
 /* content */
 article {
@@ -647,6 +669,10 @@ tr.pager td {
 
         #login a:hover {
             color: #333;
+        }
+
+        #login .profilePicture{
+            display: none;
         }
 
     /* menu */
