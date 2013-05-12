@@ -2,8 +2,10 @@
 
 <h3>Update Your Profile</h3>
 
-@using (Ajax.BeginForm("EditProfile", "Account", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "editProfileContainer" }))
+@using (Ajax.BeginForm("EditProfile", "Account", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "editProfileContainer", LoadingElementId = "Profileloading" }))
 {
+    @Html.ValidationSummary(true)
+    
     <fieldset>
         @Html.AntiForgeryToken()
 
@@ -40,5 +42,8 @@
         </div>
 
         <input type="submit" value="Update" />
+        <span id="Profileloading" style="display:none">
+            <img src="~/Images/loading.gif" />
+        </span>
     </fieldset>
 }
