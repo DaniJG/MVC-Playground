@@ -46,8 +46,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="MiniProfiler">
-      <HintPath>..\..\packages\MiniProfiler.2.0.2\lib\net40\MiniProfiler.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -83,6 +82,9 @@
     <Compile Include="Validation\ValidationException.cs" />
     <Compile Include="Validation\ValidationResult.cs" />
     <Compile Include="Validation\ValidatorBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
