@@ -1,5 +1,5 @@
 ﻿html {
-    background-color: #e2e2e2;
+    background-color: #efeeef;
     margin: 0;
     padding: 0;
 }
@@ -102,15 +102,18 @@ h5, h6 {
 #body {
     background-color: #efeeef;
     clear: both;
-    padding-bottom: 35px;   
+    padding-bottom: 60px;   
     height:100%;
+    min-height: 100%;
     overflow:auto;
-}
+}       
 
     .main-content {
         background: url("../Images/accent.png") no-repeat;
         padding-left: 10px;
         padding-top: 30px;
+        height: 100%;
+        margin: 0 auto 0 auto;
     }
 
     .featured + .main-content {
@@ -127,6 +130,8 @@ footer {
     font-size: .8em;
     height: 50px;
     min-width:100%;
+    bottom:0;
+    position:fixed;
 }
 
 footer #debuggingControls{
