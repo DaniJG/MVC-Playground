@@ -1,0 +1,28 @@
+﻿@if (Request.RequestContext.HttpContext.IsDebuggingEnabled)
+{
+    <nav id="debuggingControls">
+        <ul>
+            <li>
+            @if(DJRM.Common.Infrastructure.Profiling.Cookies.GlimpseEnabled(Request)){
+                <a class="button" href="javascript:(function(){document.cookie='@DJRM.Common.Infrastructure.Profiling.Cookies.Glimpse=; path=/; expires=Sat, 01 Jan 2050 12:00:00 GMT;'; window.location.reload();})();">Turn Glimpse Off</a>            
+            }
+            else
+            {
+                <a class="button" href="javascript:(function(){document.cookie='@DJRM.Common.Infrastructure.Profiling.Cookies.Glimpse=On; path=/; expires=Sat, 01 Jan 2050 12:00:00 GMT;'; window.location.reload();})();">Turn Glimpse On</a>
+            }
+            </li>
+            <li>
+                <a class="button" href="@Url.Content("Elmah.axd")" target="_blank">Elmah</a>
+            </li>
+            <li>
+            @if(DJRM.Common.Infrastructure.Profiling.Cookies.MiniProfilerEnabled(Request)){
+                <a class="button" href="javascript:(function(){document.cookie='@DJRM.Common.Infrastructure.Profiling.Cookies.MiniProfiler=; path=/; expires=Sat, 01 Jan 2050 12:00:00 GMT;'; window.location.reload();})();">Turn Profiler Off</a>            
+            }
+            else
+            {
+                <a class="button" href="javascript:(function(){document.cookie='@DJRM.Common.Infrastructure.Profiling.Cookies.MiniProfiler=On; path=/; expires=Sat, 01 Jan 2050 12:00:00 GMT;'; window.location.reload();})();">Turn Profiler On</a>
+            }
+            </li>
+        </ul>
+    </nav>
+}

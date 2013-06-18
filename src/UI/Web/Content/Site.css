@@ -6,12 +6,13 @@
 
 body {
     background-color: #fff;
-    border-top: solid 10px #000;
     color: #333;
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width:100%;
 }
 
 a {
@@ -101,7 +102,9 @@ h5, h6 {
 #body {
     background-color: #efeeef;
     clear: both;
-    padding-bottom: 35px;
+    padding-bottom: 35px;   
+    height:100%;
+    overflow:auto;
 }
 
     .main-content {
@@ -122,28 +125,33 @@ footer {
     clear: both;
     background-color: #e2e2e2;
     font-size: .8em;
-    height: 100px;
+    height: 50px;
+    min-width:100%;
 }
 
 footer #debuggingControls{
 	float:right;
 	padding-right: 10px;
-}	
+}	 
 
-footer #debuggingControls label{
-	vertical-align:inherit;
-}
+    footer #debuggingControls ul li{
+	    display:inline-block;
+        list-style:none;
+    }
 
-footer #debuggingControls ul li{
-	display:inline;
-	line-height: 4;
-}
+    footer #debuggingControls ul li a{
+        background-color: #d3dce0;
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
 
 /* site title
 ----------------------------------------------------------*/
 .site-title {
     color: #c8c8c8;
-    font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
+    font-family: 'Pacifico', cursive;
     font-size: 2.3em;
     margin: 0;
 }
