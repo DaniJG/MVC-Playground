@@ -173,12 +173,17 @@ footer #debuggingControls{
     margin: 0;
 }
 
-.site-title a, .site-title a:hover, .site-title a:active {
+.site-title a, .site-title a:active {
     background: none;
     color: #c8c8c8;
     outline: none;
     text-decoration: none;
 }
+
+    .site-title a:hover {
+        -webkit-text-shadow: 0 1px 0 #999;
+        text-shadow: 0 1px 0 #999;
+    }
 
 
 /* login
