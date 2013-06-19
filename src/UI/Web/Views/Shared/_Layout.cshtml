@@ -31,15 +31,17 @@
             </div>
         </header>
         <div id="body">
+            <div class="body-wrapper">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+            <section class="main-content content-wrapper clear-fix">
                 @RenderBody()
             </section>
+            </div>
         </div>
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p>&copy; @DateTime.Now.Year - djrm</p>
                 </div>
                 @Html.Partial("_DebuggingControls")
             </div>

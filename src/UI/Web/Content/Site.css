@@ -1,11 +1,10 @@
 ﻿html {
-    background-color: #efeeef;
+    background-color: #fff;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #fff;
     color: #333;
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
@@ -100,19 +99,24 @@ h5, h6 {
 }
 
 #body {
-    background-color: #efeeef;
-    clear: both;
-    padding-bottom: 60px;   
-    height:100%;
-    min-height: 100%;
-    overflow:auto;
+    /*clear: both;*/
+    position:absolute;
+    width:100%;
+    top:75px;
+    bottom:50px;
+    overflow:hidden;
 }       
+
+#body .body-wrapper {
+    background-color: #efeeef;
+    height:100%;
+    overflow:auto;
+}
 
     .main-content {
         background: url("../Images/accent.png") no-repeat;
         padding-left: 10px;
         padding-top: 30px;
-        height: 100%;
         margin: 0 auto 0 auto;
     }
 
@@ -120,18 +124,26 @@ h5, h6 {
         background: url("../Images/heroAccent.png") no-repeat;
     }
 
+body > header{
+   height:75px;
+   width:100%; 
+   top:0;
+   position: absolute;
+   background-color:#fff;
+}
+
 header .content-wrapper {
     padding-top: 20px; 
 }
 
-footer {
+body > footer {
     clear: both;
     background-color: #e2e2e2;
     font-size: .8em;
     height: 50px;
     min-width:100%;
     bottom:0;
-    position:fixed;
+    position:absolute;
 }
 
 footer #debuggingControls{
@@ -249,7 +261,7 @@ ul#menu {
     background-color: #fff;
 }
 
-    .featured .content-wrapper {
+    .featured > .content-wrapper {
         background-color: #7ac0da;
         background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
@@ -800,6 +812,10 @@ tr.pager td {
         text-align: center;
         height: auto;
         padding: 10px 0;
+    }
+
+    body > footer{
+        padding:0;
     }
 
         footer p {
