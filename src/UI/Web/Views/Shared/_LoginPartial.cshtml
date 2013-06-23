@@ -1,4 +1,4 @@
-﻿@if (Request.IsAuthenticated) {
+﻿@*@if (Request.IsAuthenticated) {
     <text>
         
         Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })!
@@ -13,4 +13,26 @@
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "AccountLogin", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
+}*@
+
+@if (Request.IsAuthenticated) {
+    @Html.Action("Picture", "Account")
+    <li class="account-menu">
+        <a href="#">Account</a>
+        <ul>
+        
+            <li>@Html.ActionLink("Manage Account", "Manage", "Account", routeValues: null, htmlAttributes: new { @class = "username", title = "Manage" })</li>
+            <li>
+            @using (Html.BeginForm("LogOff", "AccountLogin", FormMethod.Post, new { id = "logoutForm" })) {
+                @Html.AntiForgeryToken()
+                <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+            }
+            </li>
+        </ul>        
+    </li>    
+} else {
+        
+    <li class="account-menu">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    <li class="account-menu">@Html.ActionLink("Log in", "Login", "AccountLogin", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>        
 }
+

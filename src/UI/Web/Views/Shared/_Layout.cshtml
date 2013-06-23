@@ -1,54 +1,71 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - DJRM</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-        @Styles.Render("~/Content/css")
-        @Styles.Render("~/Content/themes/Aristo/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("djrm", "Index", "Home")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            <div class="body-wrapper">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - DJRM</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/Aristo/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="admin" class="menubar">
+                <li class="site-title">@Html.ActionLink("djrm", "Index", "Home")</li>                
+                <li>
+                    <a href="#navigation">Admin Navigation</a>
+                    <ul>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#customize">Customize</a></li>
+                        <li><a href="#widgets">Widgets</a></li>
+                        <li><a href="#menus">Menus</a></li>
+                        <li><a href="#background">Background</a></li>
+                        <li><a href="#header">Header</a></li>
+                    </ul>
+                </li>
+                <li><a href="#comments">0 new comments</a></li>
+                <li>
+                    <a href="#View">New</a>
+                    <ul>
+                        <li><a href="#post">Post</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#page">Page</a></li>
+                        <li><a href="#user">User</a></li>
+                    </ul>
+                </li>
+                @Html.Partial("_LoginPartial")
+            </ul>
+        </nav>
+    </header>
+    <div id="body">
+        <div class="body-wrapper">
             @RenderSection("featured", required: false)
             <section class="main-content content-wrapper clear-fix">
                 @RenderBody()
             </section>
-            </div>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - djrm</p>
-                </div>
-                @Html.Partial("_DebuggingControls")
-            </div>
-        </footer>
+    </div>
+    <footer>
+        <nav id="contactLinks">
+            <ul>
+                <li>&copy; @DateTime.Now.Year - djrm</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+            </ul>
+        </nav>
+        @Html.Partial("_DebuggingControls")
+    </footer>
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-        @StackExchange.Profiling.MiniProfiler.RenderIncludes()
-    </body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    <script type="text/javascript">
+        $("#admin").menubar();
+    </script>
+    @RenderSection("scripts", required: false)
+    @StackExchange.Profiling.MiniProfiler.RenderIncludes()
+</body>
 </html>

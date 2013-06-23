@@ -102,7 +102,7 @@ h5, h6 {
     /*clear: both;*/
     position:absolute;
     width:100%;
-    top:75px;
+    top:50px;
     bottom:50px;
     overflow:hidden;
 }       
@@ -125,7 +125,7 @@ h5, h6 {
     }
 
 body > header{
-   height:75px;
+   height:50px;
    width:100%; 
    top:0;
    position: absolute;
@@ -164,9 +164,26 @@ footer #debuggingControls{
         text-decoration: none;
     }
 
+footer #contactLinks{
+	padding-left: 10px;
+    float: left;
+}	 
+
+    footer #contactLinks ul li{
+	    display:inline-block;
+        list-style:none;
+    }
+
+    footer #contactLinks ul li a{
+        background-color: #d3dce0;
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
 /* site title
 ----------------------------------------------------------*/
-.site-title {
+/*.site-title{
     color: #c8c8c8;
     font-family: 'Pacifico', cursive;
     font-size: 2.3em;
@@ -183,9 +200,45 @@ footer #debuggingControls{
     .site-title a:hover {
         -webkit-text-shadow: 0 1px 0 #999;
         text-shadow: 0 1px 0 #999;
+    }*/
+
+#admin > li.ui-menubar-item > a{
+    height:48px;
+}
+
+
+#admin > li.ui-menubar-item .ui-button-text{
+    line-height:31px;
+}
+
+#admin li.site-title .ui-button-text{
+    color: #999;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    margin: 0;    
+}
+
+/*#admin li.site-title a, #admin li.site-title a:active {
+    background: none;
+    color: #999;
+    outline: none;
+    text-decoration: none;
+}*/
+
+    #admin li.site-title span:hover {
+        -webkit-text-shadow: 0 0.5px 0 #333;
+        text-shadow: 0 0.5px 0 #333;
     }
 
+.menubar li.account-menu{
+    float:right;
+}
 
+.menubar .profilePicture{
+    max-height:48px;
+    max-width:48px;
+    float:right;
+}
 /* login
 ----------------------------------------------------------*/
 #login {
