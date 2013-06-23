@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <ul id="admin" class="menubar">
+            <ul id="main-menu" class="menubar">
                 <li class="site-title">@Html.ActionLink("djrm", "Index", "Home")</li>                
                 <li>
                     <a href="#navigation">Admin Navigation</a>
@@ -63,7 +63,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     <script type="text/javascript">
-        $("#admin").menubar();
+        $("#main-menu").menubar();
     </script>
     @RenderSection("scripts", required: false)
     @StackExchange.Profiling.MiniProfiler.RenderIncludes()

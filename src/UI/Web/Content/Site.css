@@ -98,8 +98,25 @@ h5, h6 {
     max-width: 960px;
 }
 
+body > header{
+   height:50px;
+   width:100%; 
+   top:0;
+   position: absolute;
+   background-color:#fff;
+}
+
+body > footer {
+    clear: both;
+    background-color: #e2e2e2;
+    font-size: .8em;
+    height: 50px;
+    min-width:100%;
+    bottom:0;
+    position:absolute;
+}
+
 #body {
-    /*clear: both;*/
     position:absolute;
     width:100%;
     top:50px;
@@ -124,27 +141,40 @@ h5, h6 {
         background: url("../Images/heroAccent.png") no-repeat;
     }
 
-body > header{
-   height:50px;
-   width:100%; 
-   top:0;
-   position: absolute;
-   background-color:#fff;
+/* main menu bar
+----------------------------------------------------------*/
+#main-menu > li.ui-menubar-item > a{
+    height:48px;
 }
 
-header .content-wrapper {
-    padding-top: 20px; 
+#main-menu > li.ui-menubar-item .ui-button-text{
+    line-height:31px;
 }
 
-body > footer {
-    clear: both;
-    background-color: #e2e2e2;
-    font-size: .8em;
-    height: 50px;
-    min-width:100%;
-    bottom:0;
-    position:absolute;
+#main-menu li.site-title .ui-button-text{
+    color: #999;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    margin: 0;    
 }
+
+    #main-menu li.site-title span:hover {
+        -webkit-text-shadow: 0 0.5px 0 #333;
+        text-shadow: 0 0.5px 0 #333;
+    }
+
+#main-menu li.account-menu{
+    float:right;
+}
+
+#main-menu .profilePicture{
+    max-height:48px;
+    max-width:48px;
+    float:right;
+}
+
+/* footer bar
+----------------------------------------------------------*/
 
 footer #debuggingControls{
 	float:right;
@@ -181,64 +211,7 @@ footer #contactLinks{
         padding: 2px 3px;
         text-decoration: none;
     }
-/* site title
-----------------------------------------------------------*/
-/*.site-title{
-    color: #c8c8c8;
-    font-family: 'Pacifico', cursive;
-    font-size: 2.3em;
-    margin: 0;
-}
 
-.site-title a, .site-title a:active {
-    background: none;
-    color: #c8c8c8;
-    outline: none;
-    text-decoration: none;
-}
-
-    .site-title a:hover {
-        -webkit-text-shadow: 0 1px 0 #999;
-        text-shadow: 0 1px 0 #999;
-    }*/
-
-#admin > li.ui-menubar-item > a{
-    height:48px;
-}
-
-
-#admin > li.ui-menubar-item .ui-button-text{
-    line-height:31px;
-}
-
-#admin li.site-title .ui-button-text{
-    color: #999;
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5em;
-    margin: 0;    
-}
-
-/*#admin li.site-title a, #admin li.site-title a:active {
-    background: none;
-    color: #999;
-    outline: none;
-    text-decoration: none;
-}*/
-
-    #admin li.site-title span:hover {
-        -webkit-text-shadow: 0 0.5px 0 #333;
-        text-shadow: 0 0.5px 0 #333;
-    }
-
-.menubar li.account-menu{
-    float:right;
-}
-
-.menubar .profilePicture{
-    max-height:48px;
-    max-width:48px;
-    float:right;
-}
 /* login
 ----------------------------------------------------------*/
 #login {
@@ -282,35 +255,6 @@ footer #contactLinks{
         background: none;
         text-decoration:none;
     }
-
-
-/* menu
-----------------------------------------------------------*/
-ul#menu {
-    font-size: 1.3em;
-    font-weight: 600;
-    margin: 0 0 5px;
-    padding: 0;
-    text-align: right;
-}
-
-    ul#menu li {
-        display: inline;
-        list-style: none;
-        padding-left: 15px;
-    }
-
-        ul#menu li a {
-            background: none;
-            color: #999;
-            text-decoration: none;
-        }
-
-        ul#menu li a:hover {
-            color: #333;
-            text-decoration: none;
-        }
-
 
 /* page elements
 ----------------------------------------------------------*/
