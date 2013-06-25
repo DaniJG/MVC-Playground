@@ -95,7 +95,7 @@ h5, h6 {
 ----------------------------------------------------------*/
 .content-wrapper {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1100px;
 }
 
 body > header{
@@ -131,7 +131,6 @@ body > footer {
 }
 
     .main-content {
-        background: url("../Images/accent.png") no-repeat;
         padding-left: 10px;
         padding-top: 30px;
         margin: 0 auto 0 auto;
@@ -210,50 +209,6 @@ footer #contactLinks{
         margin-right: 3px;
         padding: 2px 3px;
         text-decoration: none;
-    }
-
-/* login
-----------------------------------------------------------*/
-#login {
-    display: block;
-    font-size: .85em;
-    margin: 0 0 10px;
-    text-align: right;
-}
-
-    #login a {
-        background-color: #d3dce0;
-        margin-left: 10px;
-        margin-right: 3px;
-        padding: 2px 3px;
-        text-decoration: none;
-    }
-
-    #login a.username {
-        background: none;
-        margin: 0;
-        padding: 0;
-        text-decoration: underline;
-    }
-
-    #login ul {
-        margin: 0;
-    }
-
-    #login li {
-        display: inline;
-        list-style: none;
-    }
-
-    #login .profilePicture{
-        height: 35px;
-        width: 35px;
-        vertical-align: middle;
-    }
-
-    #login #GetGravatar{
-        background: none;
-        text-decoration:none;
     }
 
 /* page elements
@@ -390,52 +345,12 @@ aside {
     font-weight: 700;
 }
 
-/* login page */
+/* partial login/logout */
 #loginForm {
     border-right: solid 2px #c8c8c8;
+    margin-right:1em;
     float: left;
-    width: 55%;
-}
-
-    #loginForm .validation-error {
-        display: block;
-        margin-left: 15px;
-    }
-
-    #loginForm .validation-summary-errors ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    #loginForm .validation-summary-errors li {
-        display: inline;
-        list-style: none;
-        margin: 0;
-    }
-
-    #loginForm input {
-        width: 250px;
-    }
-
-    #loginForm input[type="checkbox"],
-    #loginForm input[type="submit"],
-    #loginForm input[type="button"],
-    #loginForm button {
-        width: auto;
-    }
-
-#socialLoginForm {
-    margin-left: 40px;
-    float: left;
-    width: 40%;
-}
-
-    #socialLoginForm h2 {
-        margin-bottom:  5px;
-    }
-
-#socialLoginList button {
-    margin-bottom: 12px;
+    width: 65%;
 }
 
 #logoutForm {
@@ -459,7 +374,7 @@ aside {
 /* forms */
 fieldset {
     border: none;
-    margin: 0;
+    margin: 0.5em 0 0.2em 0;
     padding: 0;
 }
 
@@ -467,25 +382,22 @@ fieldset {
         display: none;
     }
 
-    fieldset ol {
-        padding: 0;
-        list-style: none;
-    }
+.editor-label, .display-label{
+    float:left;
+    width:300px;
+    clear: left;
+}
 
-        fieldset ol li {
-            padding-bottom: 5px;
-        }
+.editor-field, .display-field{
+    float:left;
+}
 
 label {
-    display: block;
     font-size: 1.2em;
-    font-weight: 600;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    display:inline-block;
 }
-
-label.checkbox {
-    display: inline;
-}
-
 input, textarea {
     border: 1px solid #e2e2e2;
     background: #fff;
@@ -509,6 +421,7 @@ textarea {
         background: transparent;
         border: inherit;
         width: auto;
+        margin: 15px 0 0 0;
     }
 
     input[type="submit"],
@@ -562,6 +475,7 @@ textarea {
 .field-validation-error {
     color: #e80c4d;
     font-weight: bold;
+    display:block;
 }
 
 .field-validation-valid {
