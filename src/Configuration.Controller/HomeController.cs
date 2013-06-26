@@ -31,5 +31,11 @@ namespace Configuration.Controllers
 
             return View();
         }
+
+        public ActionResult Error()
+        {
+            return View();
+        }
+
     }
 }
