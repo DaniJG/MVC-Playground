@@ -476,9 +476,19 @@ textarea {
 
 /* styles for validation helpers */
 .field-validation-error {
-    color: #e80c4d;
-    font-weight: bold;
-    display:block;
+    display:inline-block;
+    width: 16px;
+	height: 16px;
+    background-image: url(./themes/base/images/ui-icons_cd0a0a_256x240.png);
+    background-position: 0 -144px;
+}
+
+.field-validation-error-tooltip {
+    color: #e80c4d !important;
+}
+
+.field-validation-error span{
+    display: none !important;
 }
 
 .field-validation-valid {

@@ -63,7 +63,32 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryui")
     <script type="text/javascript">
-        $("#main-menu").menubar();
+        //TODO: This will grow, and will need to be placed to a file like djrm.initialize.js
+        $(function () {
+            //initialize menubar
+            $("#main-menu").menubar();
+
+            //Initialize tooltips for field validations
+            $(document).tooltip({
+                items: ".input-validation-error, .field-validation-error",
+                content: function () {
+                    var element = $(this);
+                    if (element.is(".input-validation-error")) {
+                        //tooltip for the input element with errors
+                        return $(this).parent().find('.field-validation-error > span').text();
+                    }
+                    else {
+                        //tooltip for the span with the alert icon
+                        return $(this).children().text();
+                    }
+                },
+                tooltipClass: "ui-state-error ui-corner-all field-validation-error-tooltip",
+                position: {
+                    my: 'left center',
+                    at: 'right+1 center'
+                }
+            });                        
+        });
     </script>
     @RenderSection("scripts", required: false)
     @StackExchange.Profiling.MiniProfiler.RenderIncludes()

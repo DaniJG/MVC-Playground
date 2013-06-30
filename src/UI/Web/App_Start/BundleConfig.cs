@@ -28,7 +28,8 @@ namespace DJRM.UI.Web
 
             bundles.Add(new StyleBundle("~/Content/themes/Aristo/css").Include(
                         "~/Content/themes/Aristo/Aristo.css",
-                        "~/Content/themes/jquery.ui.menubar.css"));
+                        "~/Content/themes/jquery.ui.menubar.css",
+                        "~/Content/themes/base/jquery.ui.tooltip.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
