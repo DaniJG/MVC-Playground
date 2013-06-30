@@ -99,7 +99,7 @@ h5, h6 {
 }
 
 body > header{
-   height:50px;
+   height:38px;
    width:100%; 
    top:0;
    position: absolute;
@@ -119,7 +119,7 @@ body > footer {
 #body {
     position:absolute;
     width:100%;
-    top:50px;
+    top:38px;
     bottom:50px;
     overflow:hidden;
 }       
@@ -142,19 +142,22 @@ body > footer {
 
 /* main menu bar
 ----------------------------------------------------------*/
-#main-menu > li.ui-menubar-item > a{
-    height:48px;
+
+#main-menu > li.ui-menubar-item:not(.site-title) > a{
+    padding: 2px 0; 
+    height:32px;
 }
 
-#main-menu > li.ui-menubar-item .ui-button-text{
-    line-height:31px;
+#main-menu > li.site-title > a{
+    height:36px;
 }
 
 #main-menu li.site-title .ui-button-text{
     color: #999;
     font-family: 'Pacifico', cursive;
     font-size: 1.5em;
-    margin: 0;    
+    margin: 0;
+    padding: 0.1em 0.4em;    
 }
 
     #main-menu li.site-title span:hover {
