@@ -69,6 +69,7 @@
             $("#main-menu").menubar();
 
             //Initialize tooltips for field validations
+            //TODO: Consider replacing the onError function in validate.unobtrusive directly
             $(document).tooltip({
                 items: ".input-validation-error, .field-validation-error",
                 content: function () {

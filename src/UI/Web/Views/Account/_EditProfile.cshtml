@@ -4,7 +4,7 @@
 
 @using (Ajax.BeginForm("EditProfile", "Account", new AjaxOptions { HttpMethod = "Post", UpdateTargetId = "editProfileContainer", LoadingElementId = "Profileloading" }))
 {
-    @Html.ValidationSummary(true)
+    @Html.ExtendedValidationSummary(true)
     
     <fieldset>
         @Html.AntiForgeryToken()
