@@ -12,10 +12,6 @@ namespace DJRM.Common.Controllers.ErrorHandling
     {
         protected PartialViewResult GetPartialViewResult(ExceptionContext context)
         {
-            //To avoid MVC trying to route Error page in a way like Views/DataModel/vX/Error.cshtml when the error is thrown in a datamodel compiled dll, 
-            //we remove the version of the routeData parameters
-            context.RouteData.Values.Remove("version");
-
             string controllerName = (string)context.RouteData.Values["controller"];
             string actionName = (string)context.RouteData.Values["action"];
             HandleErrorInfo model = new HandleErrorInfo(context.Exception, controllerName, actionName);
